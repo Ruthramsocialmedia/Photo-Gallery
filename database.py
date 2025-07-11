@@ -3,11 +3,9 @@ from gridfs import GridFS
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Load .env variables
+load_dotenv()
 
-# Securely load Mongo URI
 MONGO_URI = os.getenv("MONGO_URI")
-
 client = MongoClient(MONGO_URI)
 db = client.userUploads
 fs = GridFS(db)
