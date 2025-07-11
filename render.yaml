@@ -7,4 +7,4 @@ services:
     startCommand: gunicorn app:app
     envVars:
       - key: MONGO_URI
-        value: mongodb+srv://chennaicorprm:biuIvx7I7akjQx1B@cluster0.5y2ndpd.mongodb.net/VirtualTour?retryWrites=true&w=majority
+        value: "mongodb+srv://chennaicorprm:biuIvx7I7akjQx1B@cluster0.5y2ndpd.mongodb.net/VirtualTour?retryWrites=true&w=majority"
