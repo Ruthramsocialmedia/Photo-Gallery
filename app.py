@@ -6,8 +6,8 @@ from bson import ObjectId
 import os
 from geopy.geocoders import Nominatim
 
-app = Flask(__name__, template_folder="templates")
-CORS(app)
+app = Flask(__name__)
+CORS(app, origins=["https://frolicking-arithmetic-5e2913.netlify.app/"])
 
 def get_location_details(latitude, longitude):
     try:
@@ -26,14 +26,6 @@ def get_location_details(latitude, longitude):
     except Exception as e:
         print(f"Location lookup error: {e}")
         return None
-
-@app.route('/')
-def serve_gallery():
-    return render_template("Gallery.html")
-
-@app.route('/index')
-def serve_index():
-    return render_template("index.html")
 
 @app.route('/images', methods=['GET'])
 def get_all_images():
