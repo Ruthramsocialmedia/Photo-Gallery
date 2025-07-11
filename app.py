@@ -7,7 +7,7 @@ import os
 from geopy.geocoders import Nominatim
 
 app = Flask(__name__)
-CORS(app, origins=["https://frolicking-arithmetic-5e2913.netlify.app"])
+CORS(app, origins=["https://vrgallery.netlify.app"])
 
 def get_location_details(latitude, longitude):
     try:
