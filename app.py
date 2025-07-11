@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file, render_template
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from database import fs, db
 import io
@@ -7,7 +7,7 @@ import os
 from geopy.geocoders import Nominatim
 
 app = Flask(__name__)
-CORS(app, origins=["https://frolicking-arithmetic-5e2913.netlify.app/"])
+CORS(app, origins=["https://frolicking-arithmetic-5e2913.netlify.app"])
 
 def get_location_details(latitude, longitude):
     try:
